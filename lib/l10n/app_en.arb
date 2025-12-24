@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "appTitle": "Localization Demo",
+  "choosetext": "Select",
+  "npnp": "Select",
+  "selectLanguage": "Select Language",
+  "menu": "Menu",
+  "home": "Home",
+  "categories": "Categories",
+  "settings": "Settings",
+  "profile": "Profile",
+  "welcomeText": "Welcome to our application.",
+  "buttonContinue": "Continue",
+  "cancel": "Cancel"
+}

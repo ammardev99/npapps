@@ -1,0 +1,15 @@
+{
+  "@@locale": "ar",
+  "appTitle": "تجربة الترجمة",
+  "choosetext": "اختر",
+  "npnp": "اختر",
+  "selectLanguage": "اختر اللغة",
+  "menu": "القائمة",
+  "home": "الرئيسية",
+  "categories": "الفئات",
+  "settings": "الإعدادات",
+  "profile": "الملف الشخصي",
+  "welcomeText": "مرحبًا بك في تطبيقنا.",
+  "buttonContinue": "متابعة",
+  "cancel": "إلغاء"
+}
