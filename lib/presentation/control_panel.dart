@@ -14,17 +14,19 @@ class _ControlPanelState extends State<ControlPanel> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Control Panel"),
-      ),
-      body: Center(
-        child: ElevatedButton.icon(
-          icon: const Icon(Icons.add),
-          label: const Text("Add Parah"),
-          onPressed: () async {
-            await showAddParahDialog(context, parahController);
-          },
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Control Panel"),
+        ),
+        body: Center(
+          child: ElevatedButton.icon(
+            icon: const Icon(Icons.add),
+            label: const Text("Add Parah"),
+            onPressed: () async {
+              await showAddParahDialog(context, parahController);
+            },
+          ),
         ),
       ),
     );

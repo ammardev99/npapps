@@ -1,13 +1,16 @@
 // ignore_for_file: avoid_print
 
+import 'dart:io';
 import 'package:npapp/models/parah_model.dart';
 import 'package:npapp/services/pdf_quran_pak_services.dart';
+import 'package:npapp/services/storage_service.dart';
 
 class ParahController {
   final PdfQuranPakServices service = PdfQuranPakServices();
+  final StorageService storageService = StorageService();
 
-  // ADD PARAH
-  Future<Map<String, dynamic>> addParah({
+  // ADD PARAH WITH PDF
+  Future<Map<String, dynamic>> addParahWithPdf({
     required int parahId,
     required String engName,
     required String arabicName,
@@ -15,9 +18,21 @@ class ParahController {
     required int parahNo,
     required int pageCount,
     required int ayatCount,
-    required String pdfParah,
+    required File pdfFile,
+    required Function(double progress) onProgress,
   }) async {
     try {
+      final uploadTask = storageService.uploadParahPdf(pdfFile, parahNo);
+
+      uploadTask.snapshotEvents.listen((event) {
+        final progress =
+            event.bytesTransferred / event.totalBytes;
+        onProgress(progress);
+      });
+
+      final snapshot = await uploadTask;
+      final pdfUrl = await snapshot.ref.getDownloadURL();
+
       ParahModel model = ParahModel(
         id: "",
         parahId: parahId,
@@ -27,12 +42,12 @@ class ParahController {
         parahNo: parahNo,
         pageCount: pageCount,
         ayatCount: ayatCount,
-        pdfParah: pdfParah,
+        pdfParah: pdfUrl,
       );
 
       return await service.addParah(model);
     } catch (e) {
-      print("ERROR (ParahController.add): $e");
+      print("ERROR (ParahController.addParahWithPdf): $e");
       return {"status": false, "message": e.toString()};
     }
   }

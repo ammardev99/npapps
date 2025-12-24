@@ -8,6 +8,7 @@ class ShowParahTile extends StatelessWidget {
   final int parahNo;
   final int pageCount;
   final int ayatCount;
+  final String urlPdf;
 
   final VoidCallback? onDelete; // NEW
   final VoidCallback? onTap; // Optional
@@ -20,6 +21,7 @@ class ShowParahTile extends StatelessWidget {
     required this.parahNo,
     required this.pageCount,
     required this.ayatCount,
+    this.urlPdf = "'",
     this.onDelete,
     this.onTap,
   });
@@ -51,7 +53,7 @@ class ShowParahTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      engName,
+                      engName+urlPdf,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

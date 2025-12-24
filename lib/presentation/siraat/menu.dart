@@ -17,8 +17,8 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     final User? user = _authController.currentUser;
 
-    return Scaffold(
-      body: ListView(
+    return       
+       ListView(
         padding: const EdgeInsets.all(16),
         children: [
           /// USER INFO CARD
@@ -77,8 +77,7 @@ class _MenuScreenState extends State<MenuScreen> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 
   /// REUSABLE MENU TILE

@@ -27,27 +27,29 @@ class _AuthScreenState extends State<AuthScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Authentication"),
-        centerTitle: true,
-        bottom: TabBar(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Authentication"),
+          centerTitle: true,
+          bottom: TabBar(
+            controller: tabController,
+            labelColor: Colors.black87,
+            unselectedLabelColor: Colors.grey,
+            indicatorColor: Colors.blue,
+            tabs: const [
+              Tab(text: "Sign In"),
+              Tab(text: "Sign Up"),
+            ],
+          ),
+        ),
+        body: TabBarView(
           controller: tabController,
-          labelColor: Colors.black87,
-          unselectedLabelColor: Colors.grey,
-          indicatorColor: Colors.blue,
-          tabs: const [
-            Tab(text: "Sign In"),
-            Tab(text: "Sign Up"),
+          children: const [
+            LoginPage(),
+            SignupPage(),
           ],
         ),
-      ),
-      body: TabBarView(
-        controller: tabController,
-        children: const [
-          LoginPage(),
-          SignupPage(),
-        ],
       ),
     );
   }
