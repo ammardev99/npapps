@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885101643400",
+    "project_id": "npapp-693cb",
+    "storage_bucket": "npapp-693cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885101643400:android:67ede2efe8dcc39616813d",
+        "android_client_info": {
+          "package_name": "com.example.npapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA6uL0xNxHCx62h7W-kTMUG7qhfo3O15Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
