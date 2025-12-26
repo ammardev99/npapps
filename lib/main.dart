@@ -6,9 +6,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:npapp/controllers/auth_controller.dart';
 import 'package:npapp/firebase_options.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:npapp/presentation/sharedprefrences/preferences/prefs_controller.dart';
 
 Future<void> main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
+  await PrefsController.instance.init();
 
   // Status bar style
   SystemChrome.setSystemUIOverlayStyle(
@@ -98,9 +101,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: CircularProgressIndicator(color: Colors.green),
-      ),
+      body: Center(child: CircularProgressIndicator(color: Colors.green)),
     );
   }
 }

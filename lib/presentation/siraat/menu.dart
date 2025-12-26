@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:npapp/controllers/auth_controller.dart';
 import 'package:npapp/presentation/control_panel.dart';
 import 'package:npapp/presentation/language_selection_screen.dart';
+import 'package:npapp/presentation/sharedprefrences/values.dart';
+import 'package:npapp/presentation/sharedprefrences/values_page_prefs.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -70,6 +72,28 @@ class _MenuScreenState extends State<MenuScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const LanguageSelectionScreen()),
+              );
+            },
+          ),
+          _menuTile(
+            icon: Icons.dashboard_customize,
+            title: "Values",
+            onTap: () {
+              // Navigate to ControlPanel() screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const ValuesPageState()),
+              );
+            },
+          ),
+          _menuTile(
+            icon: Icons.dashboard_customize,
+            title: "Stored Values",
+            onTap: () {
+              // Navigate to ControlPanel() screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => ValuesPagePrefs()),
               );
             },
           ),
