@@ -2,11 +2,15 @@
 
 Software Configuration Management Plan
 
-## Heading
+## Live Builds
 
-> Tag Here
+> 1.0.0+1 - 25 Dec 2025
 
-`Action`
+`New`
+
+- Add Here
+
+`Modify`
 
 - Add Here
 
