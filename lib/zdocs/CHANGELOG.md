@@ -10,13 +10,16 @@ Software Development Plan
 
 ---
 
-## Published - 1.1.0+2
+## Last Published - 1.1.0+2
 
-> 26 Dec 2025
+> 28 Dec 2025
 
 `Action`
 
-- Add Here
+- Activate the Hive
+- Create User Setting
+- [x] Download the PDF in local
+- [x] Sync Offline Mode
 
 `Modify`
 

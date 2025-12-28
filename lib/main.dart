@@ -1,37 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'package:npapp/controllers/auth_controller.dart';
-import 'package:npapp/firebase_options.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:npapp/presentation/sharedprefrences/preferences/prefs_controller.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:npapp/bootstrap/third_party_services_initializer.dart';
+import 'package:npapp/controllers/auth_controller.dart';
 
 Future<void> main() async {
-
-  WidgetsFlutterBinding.ensureInitialized();
-  await PrefsController.instance.init();
-
-  // Status bar style
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.green,
-      statusBarIconBrightness: Brightness.light,
-    ),
-  );
-
-  try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-    debugPrint('✅ Firebase connected');
-  } catch (e, stackTrace) {
-    debugPrint('❌ Firebase connection failed');
-    debugPrint('Error: $e');
-    debugPrint('StackTrace: $stackTrace');
-  }
-
+  await ThirdPartyServicesInitializer.init();
   runApp(const MyApp());
 }
 

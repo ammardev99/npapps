@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'dart:io';
-import 'package:npapp/models/parah_model.dart';
+import 'package:npapp/data/models/parah_model.dart';
 import 'package:npapp/services/pdf_quran_pak_services.dart';
 import 'package:npapp/services/storage_service.dart';
 

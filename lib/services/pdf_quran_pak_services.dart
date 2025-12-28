@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:npapp/models/parah_model.dart';
+import 'package:npapp/data/models/parah_model.dart';
 
 class PdfQuranPakServices {
   final CollectionReference parahRef = FirebaseFirestore.instance.collection(
