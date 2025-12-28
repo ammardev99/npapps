@@ -53,12 +53,12 @@ class _MenuScreenState extends State<MenuScreen> {
 
         _menuTile(
           icon: Icons.dashboard_customize,
-          title: "Control Panel",
+          title: "Parah Control Panel",
           onTap: () {
             // Navigate to ControlPanel() screen
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => const ControlPanel()),
+              MaterialPageRoute(builder: (_) => const ParahControlPanel()),
             );
           },
         ),

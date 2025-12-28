@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:npapp/presentation/siraat/menu.dart';
-import 'package:npapp/presentation/siraat/parah_list.dart';
+import 'package:npapp/presentation/siraat/parah/local_screen.dart';
+import 'package:npapp/presentation/siraat/parah/parah_list.dart';
 
 class Siraat extends StatefulWidget {
   const Siraat({super.key});
@@ -15,6 +16,7 @@ class _SiraatState extends State<Siraat> {
   final List<Widget> _pages = [
     // DashboardScreen(),
     ParahListScreen(),
+    LocalParahListScreen(),
     const MenuScreen(),
   ];
 
@@ -34,10 +36,8 @@ class _SiraatState extends State<Siraat> {
           type: BottomNavigationBarType.fixed,
 
           items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book),
-              label: "Parah",
-            ),
+            BottomNavigationBarItem( icon: Icon(Icons.menu_book), label: "Parah",),
+            BottomNavigationBarItem( icon: Icon(Icons.offline_pin_outlined), label: "Local",),
             BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Menu"),
           ],
         ),
