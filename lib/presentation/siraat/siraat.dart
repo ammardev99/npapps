@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:npapp/presentation/hq/combined_parah.dart';
 import 'package:npapp/presentation/siraat/menu.dart';
 import 'package:npapp/presentation/siraat/parah/local_screen.dart';
 import 'package:npapp/presentation/siraat/parah/parah_list.dart';
@@ -17,6 +18,7 @@ class _SiraatState extends State<Siraat> {
     // DashboardScreen(),
     ParahListScreen(),
     LocalParahListScreen(),
+    CombinedParahListScreen(),
     const MenuScreen(),
   ];
 
@@ -38,6 +40,7 @@ class _SiraatState extends State<Siraat> {
           items: const [
             BottomNavigationBarItem( icon: Icon(Icons.menu_book), label: "Parah",),
             BottomNavigationBarItem( icon: Icon(Icons.offline_pin_outlined), label: "Local",),
+            BottomNavigationBarItem( icon: Icon(Icons.sticky_note_2_outlined), label: "Mix",),
             BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Menu"),
           ],
         ),

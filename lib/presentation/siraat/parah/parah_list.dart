@@ -98,7 +98,6 @@ localSave: () async {
     debugPrint("Error saving Parah locally: $e");
   }
 },
-
                 );
               }
               return NoParahTile(parahCount: p.parahNo);
